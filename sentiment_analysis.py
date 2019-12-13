@@ -1,3 +1,10 @@
+'''
+@author: Shaikat Islam
+@title: sentiment_analysis.py
+@professor: Professor Ming Chow
+@date: 13-12-2019
+@purpose: Appendix for COMP116 Final Project
+'''
 from bs4 import BeautifulSoup
 from bs4.element import Comment
 import nltk
@@ -42,6 +49,7 @@ arbella_rst = {}
 arbella_subj = []
 allianz_rst = {}
 allianz_subj = []
+
 # appostrophe words used in preprocessing
 appos = {
 "aren't" : "are not",
@@ -116,6 +124,7 @@ with open('negative-words.txt') as f:
     neg_words = re.sub('[,\.()":;!@#$%^&*\d]|\'s|\'', '', neg_words)
     neg_list = neg_words.replace('\n',' ').replace('  ',' ').lower().split(' ')
 
+# dictionary of URLs for each of the top ten cyberinsurance companies
 top_cyber_urls = {
 "CHUBB":"https://www.chubb.com/us-en/cyber-risk-management/?gclid=CjwKCAiA58fvBRAzEiwAQW-hzeUjyXuJc7UqPS_q_XzygQU2Cs6MdIhRBbZn6_4cMZPguhbt6pmf5RoCQTQQAvD_BwE",
 "AX_AXL":"https://axaxl.com/insurance/products/cyber-insurance",
